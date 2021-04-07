@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10421d"
+
+    tools:context=".SignIn">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        android:id="@+id/Lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:hint="No. Telefono"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15sp" />
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/Lin1"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_signin"
+        android:text="Entrar"
+        android:textStyle="bold"
+        android:fontFamily="@font/aref_ruqaa"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Lin1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="86dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="Iniciar Sesion"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

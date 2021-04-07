@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="colorSignin">#00a80b</color>
+    <color name="colorRegister">#005215</color>
+
+    <color name="RippleEffectColor">#98e3ab</color>
+
 </resources>
