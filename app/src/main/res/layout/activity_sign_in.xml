@@ -49,6 +49,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/Signin"
         android:layout_below="@+id/Lin1"
         android:layout_margin="15dp"
         android:background="@drawable/btn_signin"
