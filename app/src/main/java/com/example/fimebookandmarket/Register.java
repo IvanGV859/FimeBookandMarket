@@ -22,14 +22,13 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    private EditText mEditTextPhone;
-    private EditText mEditTextEmail;
-    private EditText mEditTextPass;
+    private EditText mEditTextPhone, mEditTextEmail, mEditTextPass, mEditTextConfPass;
 
     //VARIABLES DE LOS DATOS QUE VAMOS A REGISTRAR
     private String phone ="";
     private String email ="";
     private String password ="";
+    private String confpass ="";
 
     //FirebaseAuth nos brinda el paquete de autenticacion de firebase
     FirebaseAuth mAuth;
@@ -44,6 +43,7 @@ public class Register extends AppCompatActivity {
         mEditTextPhone = findViewById(R.id.edtPhone);
         mEditTextEmail = findViewById(R.id.edtEmail);
         mEditTextPass = findViewById(R.id.edtPass);
+        mEditTextConfPass = findViewById(R.id.edtConfPass);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -56,10 +56,15 @@ public class Register extends AppCompatActivity {
                 phone = mEditTextPhone.getText().toString();
                 email = mEditTextEmail.getText().toString();
                 password = mEditTextPass.getText().toString();
+                confpass = mEditTextConfPass.getText().toString();
 
-                if(!phone.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+                if(!phone.isEmpty() && !email.isEmpty() && !password.isEmpty() && !confpass.isEmpty()) {
                     if (password.length() >= 6) {
-                        registerUser();
+                        if(password.equals(confpass)){
+                            registerUser();
+                        }else {
+                            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                        }
                     }
                     else {
                         Toast.makeText(Register.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
@@ -83,6 +88,7 @@ public class Register extends AppCompatActivity {
                     map.put("phone", phone);
                     map.put("email", email);
                     map.put("password", password);
+                    map.put("confpass", confpass);
 
                     String id = mAuth.getCurrentUser().getUid();
 

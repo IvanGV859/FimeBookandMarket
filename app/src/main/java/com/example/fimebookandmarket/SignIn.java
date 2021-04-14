@@ -38,8 +38,6 @@ public class SignIn extends AppCompatActivity {
         switch (view.getId()){
             case R.id.Signin:
                 userLogin();
-                /*Intent intent = new Intent(SignIn.this,Home.class);
-                startActivity(intent);*/
                 break;
         }
     }
@@ -68,7 +66,7 @@ public class SignIn extends AppCompatActivity {
         }
 
         if(password.length() < 6){
-            mEditTextPass.setError("Ingrese minimo 6 caracteres en la contraseña");
+            mEditTextPass.setError("Contraseña incorrecta!");
             mEditTextPass.requestFocus();
             return;
         }
@@ -81,7 +79,7 @@ public class SignIn extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }else {
-                    Toast.makeText(SignIn.this, "Usuario no registrado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignIn.this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
                 }
             }
         });

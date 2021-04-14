@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:background="#ffffff"
-            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawableLeft="@drawable/ic_email"
             android:hint="Correo electronico"
             android:inputType="text"
             android:padding="10dp"

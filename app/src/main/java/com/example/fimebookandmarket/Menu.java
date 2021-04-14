@@ -9,22 +9,18 @@ import android.widget.Button;
 
 public class Menu extends AppCompatActivity {
 
-    Button btrLibr;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+    }
 
-        btrLibr = findViewById(R.id.btnLibr);
-
-        btrLibr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btnLibr:
                 Intent libros = new Intent(Menu.this,Libros.class);
                 startActivity(libros);
-            }
-        });
-
+                break;
+        }
     }
 }

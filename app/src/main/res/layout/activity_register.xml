@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#ffffff"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_email"
             android:hint="Correo"
             android:inputType="text"
             android:padding="10dp"
@@ -58,13 +58,13 @@
         android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/edtCode"
+            android:id="@+id/edtConfPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#ffffff"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
-            android:hint="Codigo de Seguridad"
+            android:hint="Confirmar contraseña"
             android:inputType="text"
             android:padding="10dp"
             android:text=""
