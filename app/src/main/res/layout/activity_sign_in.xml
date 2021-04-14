@@ -25,7 +25,7 @@
             android:background="#ffffff"
             android:drawableLeft="@drawable/ic_phone_black_24dp"
             android:hint="Correo electronico"
-            android:inputType="phone"
+            android:inputType="text"
             android:padding="10dp"
             android:text=""
             android:textSize="15sp" />
