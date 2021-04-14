@@ -34,26 +34,28 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <Button
             android:id="@+id/btnSignin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Entrar"
-            android:background="@drawable/btn_signin"
-            android:textColor="#ffffff"
             android:layout_marginRight="6dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/btn_signin"
+            android:onClick="onClick"
+            android:text="Entrar"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_register"
-            android:textColor="#ffffff"
-            android:text="Registrarse"
             android:layout_marginRight="6dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/btn_register"
+            android:onClick="onClick"
+            android:text="Registrarse"
+            android:textColor="#ffffff" />
         
     </LinearLayout>
 

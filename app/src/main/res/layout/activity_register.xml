@@ -85,6 +85,7 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/btn_register"
         android:fontFamily="@font/aref_ruqaa"
+        android:onClick="onClick"
         android:text="Registrarse"
         android:textColor="#ffffff"
         android:textStyle="bold" />

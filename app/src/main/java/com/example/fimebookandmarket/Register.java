@@ -25,7 +25,6 @@ public class Register extends AppCompatActivity {
     private EditText mEditTextPhone;
     private EditText mEditTextEmail;
     private EditText mEditTextPass;
-    private Button mButtonRegister;
 
     //VARIABLES DE LOS DATOS QUE VAMOS A REGISTRAR
     private String phone ="";
@@ -45,14 +44,15 @@ public class Register extends AppCompatActivity {
         mEditTextPhone = findViewById(R.id.edtPhone);
         mEditTextEmail = findViewById(R.id.edtEmail);
         mEditTextPass = findViewById(R.id.edtPass);
-        mButtonRegister = findViewById(R.id.btnRegister1);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mButtonRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    }
+
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btnRegister1:
                 phone = mEditTextPhone.getText().toString();
                 email = mEditTextEmail.getText().toString();
                 password = mEditTextPass.getText().toString();
@@ -68,8 +68,8 @@ public class Register extends AppCompatActivity {
                 else {
                     Toast.makeText(Register.this, "Debe completar los campos", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
+                break;
+        }
     }
 
     private void registerUser(){
