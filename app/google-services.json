@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "333348999175",
+    "project_id": "fimebook-and-market",
+    "storage_bucket": "fimebook-and-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333348999175:android:260be084ac5e88fa9f9aa2",
+        "android_client_info": {
+          "package_name": "com.example.fimebookandmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333348999175-l299vph1vrq8i0o45cni001j21ar3aud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fimebookandmarket",
+            "certificate_hash": "d442ede1d5adbc00e1010b5c6107e46bf517f1a0"
+          }
+        },
+        {
+          "client_id": "333348999175-epjcf8roos6f2p0j0glb07vh4oe7e3v2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3McO3fTbJ-dgOhtQ4yx4H4ObINrMvv8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333348999175-epjcf8roos6f2p0j0glb07vh4oe7e3v2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
