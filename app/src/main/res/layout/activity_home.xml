@@ -94,11 +94,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
-                                    android:id="@+id/btn1"
-                                    android:background="@android:color/transparent"
+                                    android:id="@+id/btnPerfil"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>
@@ -135,11 +137,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
-                                    android:id="@+id/btn2"
-                                    android:background="@android:color/transparent"
+                                    android:id="@+id/btnMenu"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>
@@ -187,11 +191,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
                                     android:id="@+id/btn3"
-                                    android:background="@android:color/transparent"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>
@@ -228,11 +234,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
                                     android:id="@+id/btn4"
-                                    android:background="@android:color/transparent"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>
@@ -280,11 +288,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
-                                    android:id="@+id/btn6"
-                                    android:background="@android:color/transparent"
+                                    android:id="@+id/btnCerrarSesion"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>
@@ -321,11 +331,13 @@
                                     android:layout_marginBottom="10dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
+
                                 <Button
                                     android:id="@+id/btn7"
-                                    android:background="@android:color/transparent"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="onClick" />
 
 
                             </RelativeLayout>

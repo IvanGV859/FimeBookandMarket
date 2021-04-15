@@ -8,37 +8,35 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Home extends AppCompatActivity {
 
-    Button btn1,btn2,btn3,btn4,btn6,btn7;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        mAuth = FirebaseAuth.getInstance();
+    }
 
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
-        btn6 = findViewById(R.id.btn6);
-        btn7 = findViewById(R.id.btn7);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    public void onClick(View view){
+        switch (view.getId()) {
+            case R.id.btnPerfil:
                 Toast.makeText(Home.this,"Editar Perfil", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.btnMenu:
                 Intent menu = new Intent(Home.this,Menu.class);
                 startActivity(menu);
-            }
-        });
-
+                break;
+            case R.id.btnCerrarSesion:
+                mAuth.signOut();
+                Toast.makeText(this, "Cerrando sesion...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Home.this,MainActivity.class));
+                finish();
+                break;
+        }
     }
 }

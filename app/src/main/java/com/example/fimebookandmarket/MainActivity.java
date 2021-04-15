@@ -7,13 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mAuth = FirebaseAuth.getInstance();
     }
 
     public void onClick(View view){
@@ -26,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent register = new Intent(MainActivity.this,Register.class);
                 startActivity(register);
                 break;
+        }
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        if(mAuth.getCurrentUser() != null){
+            startActivity(new Intent(MainActivity.this, Home.class));
+            finish();
         }
     }
 }

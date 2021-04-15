@@ -65,7 +65,7 @@
             android:background="#ffffff"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
             android:hint="Confirmar contraseña"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:padding="10dp"
             android:text=""
             android:textSize="15sp" />

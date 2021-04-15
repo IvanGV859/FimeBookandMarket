@@ -78,6 +78,7 @@ public class SignIn extends AppCompatActivity {
                     Intent intent = new Intent(SignIn.this,Home.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    finish();
                 }else {
                     Toast.makeText(SignIn.this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
                 }
