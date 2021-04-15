@@ -1,29 +1,25 @@
 package com.example.fimebookandmarket;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
 
     private TextView mTextViewNombre;
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase;
+    //private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +27,11 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        //mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mTextViewNombre = (TextView) findViewById(R.id.nombrePerfil);
+        mTextViewNombre = findViewById(R.id.nombrePerfil);
 
-        mDatabase.child("Usuarios").addValueEventListener(new ValueEventListener() {
+        /*mDatabase.child("Usuarios").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
@@ -49,9 +45,10 @@ public class Home extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
-        });
+        });*/
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void onClick(View view){
         switch (view.getId()) {
             case R.id.btnPerfil:
