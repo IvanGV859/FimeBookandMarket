@@ -22,13 +22,14 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    private EditText mEditTextPhone, mEditTextEmail, mEditTextPass, mEditTextConfPass;
+    private EditText mEditTextUsuario, mEditTextEmail, mEditTextPass, mEditTextConfPass, mEditTextPhone;
 
     //VARIABLES DE LOS DATOS QUE VAMOS A REGISTRAR
     private String phone ="";
     private String email ="";
     private String password ="";
     private String confpass ="";
+    private String usuario ="";
 
     //FirebaseAuth nos brinda el paquete de autenticacion de firebase
     FirebaseAuth mAuth;
@@ -44,6 +45,7 @@ public class Register extends AppCompatActivity {
         mEditTextEmail = findViewById(R.id.edtEmail);
         mEditTextPass = findViewById(R.id.edtPass);
         mEditTextConfPass = findViewById(R.id.edtConfPass);
+        mEditTextUsuario =findViewById(R.id.edtUsuario);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -57,13 +59,18 @@ public class Register extends AppCompatActivity {
                 email = mEditTextEmail.getText().toString();
                 password = mEditTextPass.getText().toString();
                 confpass = mEditTextConfPass.getText().toString();
+                usuario = mEditTextUsuario.getText().toString();
 
-                if(!phone.isEmpty() && !email.isEmpty() && !password.isEmpty() && !confpass.isEmpty()) {
+                if(!usuario.isEmpty() && !email.isEmpty() && !password.isEmpty() && !confpass.isEmpty() && !phone.isEmpty()) {
                     if (password.length() >= 6) {
-                        if(password.equals(confpass)){
-                            registerUser();
+                        if(usuario.length() >=5){
+                            if(password.equals(confpass)){
+                                registerUser();
+                            }else {
+                                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                            }
                         }else {
-                            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "El usuario debe tener al menos 5 caracteres", Toast.LENGTH_SHORT).show();
                         }
                     }
                     else {
@@ -89,6 +96,7 @@ public class Register extends AppCompatActivity {
                     map.put("email", email);
                     map.put("password", password);
                     map.put("confpass", confpass);
+                    map.put("usuario", usuario);
 
                     String id = mAuth.getCurrentUser().getUid();
 

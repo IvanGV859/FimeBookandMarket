@@ -18,14 +18,14 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/edtPhone"
+            android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#ffffff"
-            android:drawableLeft="@drawable/ic_phone_black_24dp"
-            android:hint="No. Telefono"
-            android:inputType="phone"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:hint="Usuario"
+            android:inputType="text"
             android:padding="10dp"
             android:text=""
             android:textSize="15sp" />
@@ -66,6 +66,19 @@
             android:drawableLeft="@drawable/ic_lock_black_24dp"
             android:hint="Confirmar contraseña"
             android:inputType="textPassword"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:hint="No. Telefono"
+            android:inputType="phone"
             android:padding="10dp"
             android:text=""
             android:textSize="15sp" />
