@@ -1,9 +1,11 @@
 package com.example.fimebookandmarket;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -44,7 +46,7 @@ public class Home extends AppCompatActivity {
 
                     String nombreP = dataSnapshot.child(id).child("usuario").getValue().toString();
 
-                    mTextViewNombre.setText("Usuario: " + nombreP);
+                    mTextViewNombre.setText(nombreP);
                 }
             }
             @Override
@@ -64,10 +66,29 @@ public class Home extends AppCompatActivity {
                 startActivity(menu);
                 break;
             case R.id.btnCerrarSesion:
-                mAuth.signOut();
-                Toast.makeText(this, "Cerrando sesion...", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Home.this,MainActivity.class));
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+
+                builder.setMessage("¿Estas seguro que quieres cerrar sesión?")
+                        .setTitle("Cerrar sesión");
+
+                builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mAuth.signOut();
+                        Toast.makeText(Home.this, "Cerrando sesion...", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(Home.this,MainActivity.class));
+                        finish();
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
         }
     }
