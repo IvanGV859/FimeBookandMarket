@@ -23,7 +23,7 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="white">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -324,7 +324,7 @@
                                     android:textSize="16sp" />
 
                                 <Button
-                                    android:id="@+id/btn7"
+                                    android:id="@+id/btnConfig"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent"

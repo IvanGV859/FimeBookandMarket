@@ -66,6 +66,10 @@ public class Home extends AppCompatActivity {
                 Intent menu = new Intent(Home.this,Menu.class);
                 startActivity(menu);
                 break;
+            case R.id.btnConfig:
+                Intent configP = new Intent(Home.this,Configuracion.class);
+                startActivity(configP);
+                break;
             case R.id.btnCerrarSesion:
                 AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
 
