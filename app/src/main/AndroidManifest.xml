@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home.Configuracion"></activity>
+        <activity android:name=".Home.CPerfil.EditarPerfil"></activity>
+        <activity android:name=".Home.Configuracion" />
         <activity android:name=".Home.Perfil" />
         <activity android:name=".Home.Libros" />
         <activity android:name=".Home.Menu" />
