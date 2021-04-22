@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mTextViewNombre = findViewById(R.id.nombrePerfil);
+        mTextViewNombre = findViewById(R.id.nombreHome);
 
         mDatabase.child("Users").addValueEventListener(new ValueEventListener() {
             @Override
@@ -59,7 +59,8 @@ public class Home extends AppCompatActivity {
     public void onClick(View view){
         switch (view.getId()) {
             case R.id.btnPerfil:
-                Toast.makeText(Home.this,"Editar Perfil", Toast.LENGTH_SHORT).show();
+                Intent perfil = new Intent(Home.this,Perfil.class);
+                startActivity(perfil);
                 break;
             case R.id.btnMenu:
                 Intent menu = new Intent(Home.this,Menu.class);
