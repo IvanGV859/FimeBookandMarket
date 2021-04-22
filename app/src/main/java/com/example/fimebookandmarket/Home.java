@@ -1,5 +1,6 @@
 package com.example.fimebookandmarket;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -11,15 +12,18 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
 
     private TextView mTextViewNombre;
 
     private FirebaseAuth mAuth;
-    //private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,25 +31,26 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         mAuth = FirebaseAuth.getInstance();
-        //mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mTextViewNombre = findViewById(R.id.nombrePerfil);
 
-        /*mDatabase.child("Usuarios").addValueEventListener(new ValueEventListener() {
+        mDatabase.child("Users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
 
-                    String nombre1 = dataSnapshot.child("usuario").getValue().toString();
+                    String id = mAuth.getCurrentUser().getUid();
 
-                    mTextViewNombre.setText(nombre1);
+                    String nombreP = dataSnapshot.child(id).child("usuario").getValue().toString();
 
+                    mTextViewNombre.setText("Usuario: " + nombreP);
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
-        });*/
+        });
     }
 
     @SuppressLint("NonConstantResourceId")
