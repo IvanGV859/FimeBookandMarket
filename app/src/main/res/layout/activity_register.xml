@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#053010"
 
-    tools:context=".Register">
+    tools:context=".Inicio.Register">
 
     <LinearLayout
         android:orientation="vertical"

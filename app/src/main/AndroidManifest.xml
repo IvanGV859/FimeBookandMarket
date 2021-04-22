@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Configuracion"></activity>
-        <activity android:name=".Perfil" />
-        <activity android:name=".Libros" />
-        <activity android:name=".Menu" />
-        <activity android:name=".Home" />
-        <activity android:name=".SignIn" />
-        <activity android:name=".Register" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Home.Configuracion"></activity>
+        <activity android:name=".Home.Perfil" />
+        <activity android:name=".Home.Libros" />
+        <activity android:name=".Home.Menu" />
+        <activity android:name=".Home.Home" />
+        <activity android:name=".Inicio.SignIn" />
+        <activity android:name=".Inicio.Register" />
+        <activity android:name=".Inicio.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

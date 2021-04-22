@@ -1,8 +1,10 @@
-package com.example.fimebookandmarket;
+package com.example.fimebookandmarket.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.fimebookandmarket.R;
 
 public class Libros extends AppCompatActivity {
 

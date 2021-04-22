@@ -1,4 +1,4 @@
-package com.example.fimebookandmarket;
+package com.example.fimebookandmarket.Home;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fimebookandmarket.Inicio.MainActivity;
+import com.example.fimebookandmarket.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DataSnapshot;
@@ -59,15 +61,15 @@ public class Home extends AppCompatActivity {
     public void onClick(View view){
         switch (view.getId()) {
             case R.id.btnPerfil:
-                Intent perfil = new Intent(Home.this,Perfil.class);
+                Intent perfil = new Intent(Home.this, Perfil.class);
                 startActivity(perfil);
                 break;
             case R.id.btnMenu:
-                Intent menu = new Intent(Home.this,Menu.class);
+                Intent menu = new Intent(Home.this, Menu.class);
                 startActivity(menu);
                 break;
             case R.id.btnConfig:
-                Intent configP = new Intent(Home.this,Configuracion.class);
+                Intent configP = new Intent(Home.this, Configuracion.class);
                 startActivity(configP);
                 break;
             case R.id.btnCerrarSesion:
@@ -81,7 +83,7 @@ public class Home extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         mAuth.signOut();
                         Toast.makeText(Home.this, "Cerrando sesion...", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Home.this,MainActivity.class));
+                        startActivity(new Intent(Home.this, MainActivity.class));
                         finish();
                     }
                 });

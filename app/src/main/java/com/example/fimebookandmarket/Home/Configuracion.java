@@ -1,4 +1,4 @@
-package com.example.fimebookandmarket;
+package com.example.fimebookandmarket.Home;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.fimebookandmarket.Inicio.MainActivity;
+import com.example.fimebookandmarket.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Configuracion extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class Configuracion extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         mAuth.signOut();
                         Toast.makeText(Configuracion.this, "Cerrando sesion...", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Configuracion.this,MainActivity.class));
+                        startActivity(new Intent(Configuracion.this, MainActivity.class));
                         finish();
                     }
                 });

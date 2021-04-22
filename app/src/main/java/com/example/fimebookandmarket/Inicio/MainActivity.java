@@ -1,12 +1,13 @@
-package com.example.fimebookandmarket;
+package com.example.fimebookandmarket.Inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
+import com.example.fimebookandmarket.Home.Home;
+import com.example.fimebookandmarket.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
         switch (view.getId()){
             case R.id.btnSignin:
-                Intent signIn = new Intent(MainActivity.this,SignIn.class);
+                Intent signIn = new Intent(MainActivity.this, SignIn.class);
                 startActivity(signIn);
                 break;
             case R.id.btnRegister:
-                Intent register = new Intent(MainActivity.this,Register.class);
+                Intent register = new Intent(MainActivity.this, Register.class);
                 startActivity(register);
                 break;
         }
